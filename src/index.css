@@ -9,10 +9,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 
-  --dark: #151917;
+  --dark: #181A1B;
   --gold: #d6b56d;
   --cream: #f6f3ee;
-  --green: #315b46;
+  --red: #8B2635;
 }
 
 * {

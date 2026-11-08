@@ -1,31 +1,35 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check, Sparkles } from "lucide-react";
 import "./Hero.css";
+import Hero3D from "../Hero3D/Hero3D";
+
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="container hero-content">
+
         <div className="hero-text">
-          <span className="hero-eyebrow">
-            GADGET AZIENDALI PREMIUM
-          </span>
+          <div className="hero-eyebrow">
+            <Sparkles size={15} />
+            <span>DESIGN 3D PER IL TUO BUSINESS</span>
+          </div>
 
           <h1>
-            Dai forma
+            Il tuo brand.
             <br />
-            al tuo <span>brand.</span>
+            La nostra <span>creatività.</span>
           </h1>
 
           <p>
-            Gadget e accessori personalizzati,
-            progettati e realizzati con stampa 3D
-            per aziende, professionisti e locali.
+            Trasformiamo la tua identità in oggetti unici.
+            Gadget premium personalizzati per aziende,
+            professionisti, bar e ristoranti.
           </p>
 
           <div className="hero-actions">
             <a href="#categorie" className="btn-primary">
-              Scopri i prodotti
+              Esplora i prodotti
               <ArrowRight size={18} />
             </a>
 
@@ -33,18 +37,19 @@ export default function Hero() {
               Richiedi un preventivo
             </a>
           </div>
+
+          <div className="hero-highlights">
+            <span><Check size={16} /> Design personalizzato</span>
+            <span><Check size={16} /> Piccole produzioni</span>
+            <span><Check size={16} /> Made in Italy</span>
+          </div>
         </div>
 
+        
         <div className="hero-visual">
-          <div className="hero-product">
-            <span className="product-symbol">P.</span>
-            <strong>PROCRAFT3D</strong>
-            <small>PREMIUM COLLECTION</small>
-          </div>
-          <span className="hero-visual-caption">
-            Il tuo brand, un oggetto unico.
-          </span>
+          <Hero3D />
         </div>
+
       </div>
     </section>
   );
