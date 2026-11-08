@@ -1,0 +1,128 @@
+
+.hero {
+  background:
+    radial-gradient(circle at 78% 45%, #354339 0%, transparent 42%),
+    linear-gradient(125deg, #151917, #202923);
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content {
+  min-height: 580px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.hero-eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 5vw, 76px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin: 22px 0;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #d1d6d1;
+  max-width: 470px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.btn-primary,
+.btn-outline {
+  padding: 15px 22px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: #171717;
+}
+
+.btn-outline {
+  border: 1px solid #ffffff80;
+  color: white;
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  perspective: 800px;
+}
+
+.hero-product {
+  width: min(360px, 90%);
+  aspect-ratio: 1.25;
+  border-radius: 28px;
+  background: linear-gradient(140deg, #426d55, #183b2b);
+  box-shadow: 22px 35px 50px #0007, inset 3px 3px 8px #ffffff24;
+  transform: rotateY(-12deg) rotateX(5deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e8cb88;
+  gap: 10px;
+}
+
+.product-symbol {
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.hero-product strong {
+  letter-spacing: 4px;
+}
+
+.hero-product small {
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.hero-visual-caption {
+  color: #bfc9c1;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .hero-visual {
+    margin-top: 20px;
+  }
+}

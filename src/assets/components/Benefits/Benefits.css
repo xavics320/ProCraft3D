@@ -1,0 +1,44 @@
+
+.benefits {
+  background: white;
+  padding: 45px 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.benefit {
+  text-align: center;
+  padding: 12px;
+}
+
+.benefit svg {
+  color: var(--green);
+  margin-bottom: 14px;
+}
+
+.benefit h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.benefit p {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
