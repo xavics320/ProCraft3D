@@ -9,8 +9,8 @@ const BURGUNDY = "#8B2635";
 const GOLD = "#D6B56D";
 
 const INITIAL_ROTATION = {
-  x: -0.3,
-  y: 0.65,
+  x: 0.53,
+  y: 0.85,
 };
 
 function CubeFace({ text, position, rotation, fontSize = 0.36 }) {
@@ -18,6 +18,7 @@ function CubeFace({ text, position, rotation, fontSize = 0.36 }) {
     <Text
       position={position}
       rotation={rotation}
+      font="/fonts/SpaceGrotesk-VariableFont_wght.ttf"
       fontSize={fontSize}
       color={GOLD}
       anchorX="center"
@@ -79,7 +80,7 @@ function BrandCube({ pointer, active, reducedMotion }) {
     >
       <RoundedBox
         args={[2.2, 2.2, 2.2]}
-        radius={0.13}
+        radius={0.09}
         smoothness={4}
       >
         <meshStandardMaterial
@@ -91,7 +92,7 @@ function BrandCube({ pointer, active, reducedMotion }) {
 
       {/* Fronte */}
       <CubeFace
-        text="ProCraft"
+        text="3D"
         position={[0, 0, 1.108]}
         rotation={[0, 0, 0]}
         fontSize={0.5}
@@ -115,7 +116,7 @@ function BrandCube({ pointer, active, reducedMotion }) {
 
       {/* Sinistra */}
       <CubeFace
-        text="Design"
+        text="ProCraft"
         position={[-1.108, 0, 0]}
         rotation={[0, -Math.PI / 2, 0]}
         fontSize={0.32}
@@ -123,7 +124,7 @@ function BrandCube({ pointer, active, reducedMotion }) {
 
       {/* Sopra */}
       <CubeFace
-        text="DESIGN"
+        text="Design"
         position={[0, 1.108, 0]}
         rotation={[-Math.PI / 2, 0, 0]}
         fontSize={0.38}

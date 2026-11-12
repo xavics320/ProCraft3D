@@ -19,9 +19,12 @@ export default function Footer() {
         </div>
 
         <div className="footer-links">
+          <a href="#home">Home</a>
+          <a href="#chi-siamo">Chi siamo</a>
           <a href="#categorie">Prodotti</a>
-          <a href="#vantaggi">Aziende</a>
-          <a href="#horeca">Ho.Re.Ca.</a>
+          <a href="#galleria">Galleria</a>
+          <a href="#FAQ">FAQ</a>
+          <a href="#preventivo">Preventivo</a>
         </div>
       </div>
 

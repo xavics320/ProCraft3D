@@ -6,7 +6,7 @@ import Hero3D from "../Hero3D/Hero3D";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="container hero-content">
 
         <div className="hero-text">
@@ -33,7 +33,7 @@ export default function Hero() {
               <ArrowRight size={18} />
             </a>
 
-            <a href="#contatti" className="btn-outline">
+            <a href="#preventivo" className="btn-outline">
               Richiedi un preventivo
             </a>
           </div>

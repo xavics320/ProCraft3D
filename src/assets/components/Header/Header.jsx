@@ -35,12 +35,11 @@ export default function Header() {
             <a href="#home" onClick={closeMenu}>Home</a>
             <a href="#chi-siamo" onClick={closeMenu}>Chi siamo</a>
             <a href="#categorie" onClick={closeMenu}>Prodotti</a>
-            <a href="#vantaggi" onClick={closeMenu}>Aziende</a>
-            <a href="#horeca" onClick={closeMenu}>Ho.Re.Ca.</a>
-            <a href="#contatti" onClick={closeMenu}>Contatti</a>
+            <a href="#galleria" onClick={closeMenu}>Galleria</a>
+            <a href="#FAQ" onClick={closeMenu}>FAQ</a>
         </nav>
 
-        <a href="#contatti" className="header-cta">
+        <a href="#preventivo" className="header-cta">
           Richiedi informazioni
         </a>
       </div>
