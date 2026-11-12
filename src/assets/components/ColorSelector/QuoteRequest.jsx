@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MessageCircle, ArrowRight } from "lucide-react";
 import "./QuoteRequest.css";
 
@@ -23,6 +23,42 @@ export default function QuoteRequest() {
     quantity: "10",
     details: ""
   });
+
+
+useEffect(() => {
+  const readProductFromUrl = () => {
+    const hash = window.location.hash;
+
+    if (!hash.startsWith("#preventivo?")) return;
+
+    const query = hash.split("?")[1];
+    const params = new URLSearchParams(query);
+
+    const category = params.get("category");
+    const product = params.get("product");
+
+    if (!category || !product) return;
+
+    setForm((prev) => ({
+      ...prev,
+      product: category,
+      details: `Vorrei un preventivo per: ${product}.`
+    }));
+
+    document.getElementById("preventivo")?.scrollIntoView({
+      behavior: "smooth"
+    });
+  };
+
+  readProductFromUrl();
+
+  window.addEventListener("hashchange", readProductFromUrl);
+
+  return () => {
+    window.removeEventListener("hashchange", readProductFromUrl);
+  };
+}, []);
+
 
   const handleChange = (event) => {
     const { name, value } = event.target;

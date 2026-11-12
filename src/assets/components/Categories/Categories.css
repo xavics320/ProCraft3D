@@ -87,3 +87,23 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Galleria espansa */
+
+.category-gallery-wrapper {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.category-gallery-wrapper .category-gallery {
+  margin-top: 0;
+}
+
+/* Su mobile la galleria segue subito la card */
+
+@media (max-width: 600px) {
+  .category-gallery-wrapper {
+    grid-column: 1;
+  }
+}

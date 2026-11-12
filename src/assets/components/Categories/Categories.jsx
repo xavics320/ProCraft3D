@@ -6,6 +6,9 @@ import {
 
 import { categories } from "../../data/categories";
 import "./Categories.css";
+import {Fragment, useState } from "react";
+import CategoryGallery from "../CategoryGallery/CategoryGallery";
+
 
 const icons = {
   utensils: Utensils,
@@ -16,7 +19,18 @@ const icons = {
   gift: Gift
 };
 
+
 export default function Categories() {
+  const [openCategory, setOpenCategory] = useState(null);
+
+  const toggleCategory = (categoryId) => {
+    if (categoryId !== "portachiavi") return;
+
+    setOpenCategory((prev) =>
+      prev === categoryId ? null : categoryId
+    );
+  };
+
   return (
     <section className="categories-section" id="categorie">
       <div className="container">
@@ -34,25 +48,40 @@ export default function Categories() {
             const Icon = icons[category.icon];
 
             return (
-              <article
-                className="category-card"
-                key={category.id}
-                id={category.id === "horeca" ? "horeca" : undefined}
-              >
-                <div className="category-visual">
-                  <Icon size={66} strokeWidth={1} />
-                </div>
+            <Fragment key={category.id}>
+      <article
+        className={`category-card ${
+          category.id === "portachiavi"
+            ? "category-card-clickable"
+            : ""
+        }`}
+        id={category.id === "horeca" ? "horeca" : undefined}
+        onClick={() => toggleCategory(category.id)}
+      >
+        <div className="category-visual">
+          <Icon size={66} strokeWidth={1} />
+        </div>
 
-                <div className="category-info">
-                  <div>
-                    <h3>{category.title}</h3>
-                    <p>{category.description}</p>
-                  </div>
-                  <ArrowUpRight size={21} />
-                </div>
-              </article>
-            );
-          })}
+        <div className="category-info">
+          <div>
+            <h3>{category.title}</h3>
+            <p>{category.description}</p>
+          </div>
+          <ArrowUpRight size={21} />
+        </div>
+      </article>
+
+      {openCategory === category.id && (
+        <div className="category-gallery-wrapper">
+          <CategoryGallery
+            category={category.id}
+            onClose={() => setOpenCategory(null)}
+          />
+        </div>
+      )}
+    </Fragment>
+  );
+})}
         </div>
       </div>
     </section>
