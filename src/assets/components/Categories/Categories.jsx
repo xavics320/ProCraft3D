@@ -24,8 +24,6 @@ export default function Categories() {
   const [openCategory, setOpenCategory] = useState(null);
 
   const toggleCategory = (categoryId) => {
-    if (categoryId !== "portachiavi") return;
-
     setOpenCategory((prev) =>
       prev === categoryId ? null : categoryId
     );
@@ -48,40 +46,46 @@ export default function Categories() {
             const Icon = icons[category.icon];
 
             return (
-            <Fragment key={category.id}>
-      <article
-        className={`category-card ${
-          category.id === "portachiavi"
-            ? "category-card-clickable"
-            : ""
-        }`}
-        id={category.id === "horeca" ? "horeca" : undefined}
-        onClick={() => toggleCategory(category.id)}
-      >
-        <div className="category-visual">
-          <Icon size={66} strokeWidth={1} />
-        </div>
+              <Fragment key={category.id}>
+                <article
+                  className="category-card category-card-clickable"
+                  id={category.id === "horeca" ? "horeca" : undefined}
+                  onClick={() => toggleCategory(category.id)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      toggleCategory(category.id);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-expanded={openCategory === category.id}
+                  aria-label={`${openCategory === category.id ? "Chiudi" : "Apri"} la galleria ${category.title}`}
+                >
+                  <div className="category-visual">
+                    <Icon size={66} strokeWidth={1} />
+                  </div>
 
-        <div className="category-info">
-          <div>
-            <h3>{category.title}</h3>
-            <p>{category.description}</p>
-          </div>
-          <ArrowUpRight size={21} />
-        </div>
-      </article>
+                  <div className="category-info">
+                    <div>
+                      <h3>{category.title}</h3>
+                      <p>{category.description}</p>
+                    </div>
+                    <ArrowUpRight size={21} />
+                  </div>
+                </article>
 
-      {openCategory === category.id && (
-        <div className="category-gallery-wrapper">
-          <CategoryGallery
-            category={category.id}
-            onClose={() => setOpenCategory(null)}
-          />
-        </div>
-      )}
-    </Fragment>
-  );
-})}
+                {openCategory === category.id && (
+                  <div className="category-gallery-wrapper">
+                    <CategoryGallery
+                      category={category.id}
+                      onClose={() => setOpenCategory(null)}
+                    />
+                  </div>
+                )}
+              </Fragment>
+            );
+          })}
         </div>
       </div>
     </section>

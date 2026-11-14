@@ -10,6 +10,7 @@ const productOptions = [
   "Loghi 3D",
   "Espositori QR e NFC",
   "Portachiavi premium",
+  "Premi e riconoscimenti",
   "Supporti smartphone",
   "Regali aziendali",
   "Altro / Progetto personalizzato"

@@ -83,8 +83,21 @@
 }
 
 @media (max-width: 600px) {
+  .categories-section {
+    padding: 65px 0;
+  }
+
   .categories-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .category-visual {
+    height: 180px;
+  }
+
+  .category-info {
+    padding: 18px;
   }
 }
 

@@ -4,12 +4,27 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  Award,
+  Gift,
   KeyRound,
+  QrCode,
+  Smartphone,
+  Utensils,
   X
 } from "lucide-react";
 
+import { categories } from "../../data/categories.js";
 import { products } from "../../data/product.js";
 import "./CategoryGallery.css";
+
+const categoryIcons = {
+  horeca: Utensils,
+  premi: Award,
+  "porta-qr": QrCode,
+  portachiavi: KeyRound,
+  "accessori-smartphone": Smartphone,
+  gadget: Gift
+};
 
 export default function CategoryGallery({
   category = "portachiavi",
@@ -18,6 +33,8 @@ export default function CategoryGallery({
   const items = products[category] || [];
   const [activeIndex, setActiveIndex] = useState(0);
   const [imageError, setImageError] = useState({});
+  const categoryInfo = categories.find((item) => item.id === category);
+  const PlaceholderIcon = categoryIcons[category] || KeyRound;
 
   if (items.length === 0) return null;
 
@@ -50,10 +67,10 @@ export default function CategoryGallery({
           <span className="gallery-eyebrow">
             COLLEZIONE PROCRAFT3D
           </span>
-          <h3>Portachiavi personalizzati</h3>
+          <h3>{categoryInfo?.title || "Prodotti"} personalizzati</h3>
           <p>
-            Scopri i modelli disponibili e scegli quello
-            più adatto al tuo brand.
+            {categoryInfo?.description ||
+              "Scopri i modelli disponibili e scegli quello più adatto al tuo brand."}
           </p>
         </div>
 
@@ -72,7 +89,7 @@ export default function CategoryGallery({
             {current.badge}
           </span>
 
-          {!imageError[current.id] ? (
+          {current.image && !imageError[current.id] ? (
             <img
               src={current.image}
               alt={current.name}
@@ -85,7 +102,7 @@ export default function CategoryGallery({
             />
           ) : (
             <div className="gallery-placeholder">
-              <KeyRound size={75} strokeWidth={1} />
+              <PlaceholderIcon size={75} strokeWidth={1} />
               <span>Immagine in arrivo</span>
             </div>
           )}

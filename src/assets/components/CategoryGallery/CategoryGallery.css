@@ -15,6 +15,12 @@
   align-items: flex-start;
   gap: 20px;
   margin-bottom: 25px;
+  min-width: 0;
+}
+
+.gallery-heading > div,
+.gallery-details {
+  min-width: 0;
 }
 
 .gallery-eyebrow {
@@ -32,6 +38,8 @@
 .gallery-heading p {
   color: #777;
   font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .gallery-close {
@@ -50,6 +58,7 @@
   grid-template-columns: 1.1fr 0.9fr;
   gap: 35px;
   align-items: center;
+  min-width: 0;
 }
 
 .gallery-image {
@@ -111,6 +120,7 @@
   color: #777;
   line-height: 1.8;
   font-size: 15px;
+  overflow-wrap: anywhere;
 }
 
 .gallery-controls {
@@ -120,8 +130,9 @@
 }
 
 .gallery-controls button {
-  width: 43px;
-  height: 43px;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
   border-radius: 50%;
   border: 1px solid #ddd;
   background: white;
@@ -166,16 +177,16 @@
 
 @media (max-width: 768px) {
   .category-gallery {
-    padding: 20px;
+    padding: clamp(16px, 4vw, 24px);
   }
 
   .gallery-content {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: clamp(18px, 4vw, 24px);
   }
 
   .gallery-image {
-    height: 270px;
+    height: clamp(210px, 48vw, 300px);
   }
 
   .gallery-details h4 {
@@ -184,6 +195,56 @@
 
   .gallery-quote {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-gallery {
+    border-radius: 15px;
+  }
+
+  .gallery-heading {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .gallery-heading h3 {
+    font-size: clamp(21px, 6vw, 25px);
+  }
+
+  .gallery-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .gallery-close {
+    width: 36px;
+    height: 36px;
+  }
+
+  .gallery-image {
+    height: clamp(180px, 58vw, 250px);
+  }
+
+  .gallery-badge {
+    top: 12px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+    overflow-wrap: anywhere;
+  }
+
+  .gallery-details h4 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .gallery-details p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .gallery-quote {
+    padding: 14px 16px;
   }
 }
 
@@ -201,4 +262,9 @@
 .category-card-clickable:hover {
   outline: 2px solid #8b2635;
   outline-offset: 2px;
+}
+
+.category-card-clickable:focus-visible {
+  outline: 2px solid #8b2635;
+  outline-offset: 3px;
 }
