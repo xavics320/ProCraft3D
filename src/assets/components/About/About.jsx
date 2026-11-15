@@ -34,6 +34,15 @@ export default function About() {
 
   return (
     <section className="about" id="chi-siamo">
+      <div className="about-visual" aria-hidden="true">
+        <img
+          className="about-image"
+          src="/images/stampante3D.webp"
+          alt=""
+          fetchPriority="high"
+        />
+      </div>
+
       <div className="container about-inner">
 
         <div className="about-intro">
@@ -81,7 +90,6 @@ export default function About() {
             </article>
           ))}
         </div>
-
       </div>
     </section>
   );

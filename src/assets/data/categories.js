@@ -15,13 +15,13 @@ export const categories = [
     id: "porta-qr",
     icon: "qr",
     title: "Porta QR code",
-    description: "Supporti personalizzati per menu e pagamenti digitali."
+    description: "Supporti QR code e NFC personalizzati per menu, pagamenti e contatti."
   },
   {
     id: "portachiavi",
     icon: "key",
     title: "Portachiavi",
-    description: "Portachiavi su misura per valorizzare il tuo brand."
+    description: "Portachiavi personalizzati con logo e colori della tua azienda."
   },
   {
     id: "accessori-smartphone",
@@ -33,6 +33,6 @@ export const categories = [
     id: "gadget",
     icon: "gift",
     title: "Gadget aziendali",
-    description: "Idee regalo originali realizzate con stampa 3D."
+    description: "Gadget aziendali personalizzati e regali su misura realizzati con stampa 3D."
   }
 ];

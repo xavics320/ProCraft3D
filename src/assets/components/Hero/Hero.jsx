@@ -21,9 +21,9 @@ export default function Hero() {
           </h1>
 
           <p>
-            Trasformiamo la tua identità in oggetti unici.
-            Gadget premium personalizzati per aziende,
-            professionisti, bar e ristoranti.
+            Realizziamo gadget aziendali personalizzati e oggetti su misura
+            con stampa 3D per aziende, professionisti, bar e ristoranti.
+            
           </p>
 
           <div className="hero-actions">
@@ -32,14 +32,14 @@ export default function Hero() {
               <ArrowRight size={18} />
             </a>
 
-            <a href="#preventivo" className="btn-outline">
+            <a href="#contattaci" className="btn-outline">
               Richiedi un preventivo
             </a>
           </div>
 
           <div className="hero-highlights">
             <span><Check size={16} /> Design personalizzato</span>
-            <span><Check size={16} /> Piccole produzioni</span>
+            <span><Check size={16} /> Piccole e grandiproduzioni</span>
             <span><Check size={16} /> Made in Italy</span>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="hero-visual">
           <img
             className="hero-image"
-            src="/images/hero.webp"
+            src="/images/Hero-imm.webp"
             alt=""
             fetchPriority="high"
           />

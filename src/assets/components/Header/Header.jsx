@@ -8,6 +8,14 @@ export default function Header() {
 
   const closeMenu = () => setMenuOpen(false);
 
+  const WHATSAPP_NUMBER = "393484987611"
+
+  const message = encodeURIComponent(
+    "Ciao ProCraft3D! Vorrei sapere di più sui vostri servizi..."
+  );
+
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+
   return (
     <header className="site-header">
       <div className="container header-inner">
@@ -33,13 +41,17 @@ export default function Header() {
           className={menuOpen ? "nav open" : "nav"}
         >
             <a href="#home" onClick={closeMenu}>Home</a>
-            <a href="#chi-siamo" onClick={closeMenu}>Chi siamo</a>
             <a href="#categorie" onClick={closeMenu}>Prodotti</a>
-            <a href="#galleria" onClick={closeMenu}>Galleria</a>
-            <a href="#FAQ" onClick={closeMenu}>FAQ</a>
+            <a href="#chi-siamo" onClick={closeMenu}>Chi siamo</a>
+            <a href="#contattaci" onClick={closeMenu}>Contattaci</a>
+            <a href="#faq" onClick={closeMenu}>FAQ</a>
         </nav>
 
-        <a href="#preventivo" className="header-cta">
+        <a 
+        href={whatsappUrl} 
+        className="header-cta" 
+        target="_blank" 
+        rel="noopener noreferrer">
           Richiedi informazioni
         </a>
       </div>

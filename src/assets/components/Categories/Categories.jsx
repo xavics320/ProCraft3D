@@ -36,8 +36,9 @@ export default function Categories() {
           <span>IL NOSTRO CATALOGO</span>
           <h2>Le nostre categorie</h2>
           <p>
-            Soluzioni su misura per aziende,
-            professionisti e attività commerciali.
+          Ogni progetto è unico. Anche il suo preventivo.
+          <br />
+          Raccontaci la tua idea e ricevi un preventivo su misura, senza impegno.
           </p>
         </div>
 
@@ -86,6 +87,12 @@ export default function Categories() {
               </Fragment>
             );
           })}
+        </div>
+        <div className="section-bottom">
+          <h2>Ogni dettaglio fa la differenza.</h2>
+          <p >
+          Materiali, dimensioni, quantità e personalizzazioni determinano il prezzo finale di ogni creazione.
+          </p>
         </div>
       </div>
     </section>

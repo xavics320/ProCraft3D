@@ -101,6 +101,16 @@
   }
 }
 
+.section-bottom {
+  margin-top: 40px;
+  text-align: center;
+  color: #666;
+}
+
+.section-bottom h2 {
+  margin-bottom: 12px;
+  color: var(--red);
+}
 
 /* Galleria espansa */
 

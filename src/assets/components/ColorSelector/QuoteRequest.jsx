@@ -30,7 +30,7 @@ useEffect(() => {
   const readProductFromUrl = () => {
     const hash = window.location.hash;
 
-    if (!hash.startsWith("#preventivo?")) return;
+    if (!hash.startsWith("#contattaci")) return;
 
     const query = hash.split("?")[1];
     const params = new URLSearchParams(query);
@@ -91,7 +91,7 @@ useEffect(() => {
   };
 
   return (
-    <section className="quote-section" id="preventivo">
+    <section className="quote-section" id="contattaci">
       <div className="container quote-layout">
 
         <div className="quote-intro">

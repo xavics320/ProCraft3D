@@ -20,11 +20,10 @@ export default function Footer() {
 
         <div className="footer-links">
           <a href="#home">Home</a>
-          <a href="#chi-siamo">Chi siamo</a>
           <a href="#categorie">Prodotti</a>
-          <a href="#galleria">Galleria</a>
-          <a href="#FAQ">FAQ</a>
-          <a href="#preventivo">Preventivo</a>
+          <a href="#chi-siamo">Chi siamo</a>
+          <a href="#contattaci">Contattaci</a>
+          <a href="#faq">FAQ</a>
         </div>
       </div>
 
