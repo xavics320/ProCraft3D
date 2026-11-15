@@ -7,6 +7,7 @@ export const products = {
       category: "Linea Ho.Re.Ca.",
       description:
         "Portaconto personalizzati per presentare il conto con uno stile coordinato al tuo locale.",
+      image: "/images/horeca-portaconto.webp",
       badge: "Per il tuo locale"
     },
     {
@@ -15,6 +16,7 @@ export const products = {
       category: "Linea Ho.Re.Ca.",
       description:
         "Portatovaglioli pratici e personalizzabili con il logo e i colori della tua attività.",
+      image: "/images/horeca-portatovaglioli.webp",
       badge: "Personalizzabile"
     },
     {
@@ -23,6 +25,7 @@ export const products = {
       category: "Linea Ho.Re.Ca.",
       description:
         "Segnatavolo realizzati su misura per ristoranti, bar e strutture ricettive.",
+      image: "/images/horeca-segnatavolo.webp",
       badge: "Su misura"
     }
   ],
@@ -33,6 +36,7 @@ export const products = {
       category: "Premi e riconoscimenti",
       description:
         "Targhe personalizzate per celebrare traguardi, anniversari e occasioni speciali.",
+      image: "/images/premi-targa.webp",
       badge: "Per ogni occasione"
     },
     {
@@ -41,6 +45,7 @@ export const products = {
       category: "Premi e riconoscimenti",
       description:
         "Trofei dal design personalizzato per premiazioni, competizioni ed eventi aziendali.",
+      image: "/images/premi-trofeo.webp",
       badge: "Design unico"
     },
     {
@@ -49,6 +54,7 @@ export const products = {
       category: "Premi e riconoscimenti",
       description:
         "Riconoscimenti personalizzati per valorizzare persone, risultati e collaborazioni.",
+      image: "/images/premi-riconoscimento.webp",
       badge: "Per aziende"
     }
   ],
@@ -59,6 +65,7 @@ export const products = {
       category: "Espositori QR e NFC",
       description:
         "Espositore da tavolo per rendere menu e listini facilmente accessibili tramite QR code.",
+      image: "/images/porta-qr-menu.webp",
       badge: "Per il tuo locale"
     },
     {
@@ -67,6 +74,7 @@ export const products = {
       category: "Espositori QR e NFC",
       description:
         "Supporto personalizzato con QR code e NFC per condividere menu, contatti e pagamenti.",
+      image: "/images/porta-qr-nfc.webp",
       badge: "QR + NFC"
     },
     {
@@ -75,6 +83,7 @@ export const products = {
       category: "Espositori QR e NFC",
       description:
         "Espositore compatto personalizzabile con logo, colori e collegamento digitale.",
+      image: "/images/porta-qr-espositore.webp",
       badge: "Personalizzabile"
     }
   ],
@@ -114,6 +123,7 @@ export const products = {
       category: "Supporti smartphone",
       description:
         "Supporto da tavolo personalizzabile per tenere lo smartphone a portata di mano.",
+      image: "/images/smartphone-supporto.webp",
       badge: "Da tavolo"
     },
     {
@@ -122,6 +132,7 @@ export const products = {
       category: "Supporti smartphone",
       description:
         "Stand compatto con logo e colori personalizzati, ideale per la scrivania o come gadget.",
+      image: "/images/smartphone-stand.webp",
       badge: "Per aziende"
     },
     {
@@ -130,16 +141,18 @@ export const products = {
       category: "Supporti smartphone",
       description:
         "Base porta smartphone realizzata su misura per la tua identità aziendale.",
+      image: "/images/smartphone-dock.webp",
       badge: "Su misura"
     }
   ],
   gadget: [
     {
-      id: "gadget-portachiavi",
-      name: "Gadget personalizzato",
+      id: "gadget-organizer",
+      name: "Organizer da scrivania",
       category: "Regali aziendali",
       description:
-        "Un piccolo gadget personalizzato con il logo della tua azienda, pensato per eventi e clienti.",
+        "Organizer da scrivania personalizzato per tenere in ordine gli accessori e valorizzare il tuo brand.",
+      image: "/images/gadget-organizer.webp",
       badge: "Per eventi"
     },
     {
@@ -148,6 +161,7 @@ export const products = {
       category: "Regali aziendali",
       description:
         "Oggetti originali realizzati con stampa 3D e personalizzati per il tuo brand.",
+      image: "/images/gadget-regalo.webp",
       badge: "Design unico"
     },
     {
@@ -156,6 +170,7 @@ export const products = {
       category: "Regali aziendali",
       description:
         "Gadget promozionali su misura per presentare la tua attività in modo distintivo.",
+      image: "/images/gadget-logo.webp",
       badge: "Personalizzabile"
     }
   ]
