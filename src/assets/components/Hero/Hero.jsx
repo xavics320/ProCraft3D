@@ -1,7 +1,6 @@
 
 import { ArrowRight, Check, Sparkles } from "lucide-react";
 import "./Hero.css";
-import Hero3D from "../Hero3D/Hero3D";
 
 
 export default function Hero() {
@@ -47,7 +46,12 @@ export default function Hero() {
 
         
         <div className="hero-visual">
-          <Hero3D />
+          <img
+            className="hero-image"
+            src="/images/hero.webp"
+            alt=""
+            fetchPriority="high"
+          />
         </div>
 
       </div>

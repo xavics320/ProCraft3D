@@ -14,12 +14,16 @@
 
 .hero-content {
   min-height: 650px;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  display: flex;
   align-items: center;
-  gap: 60px;
   padding-top: 85px;
   padding-bottom: 85px;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
 }
 
 /* TESTI */
@@ -119,11 +123,22 @@
 /* VISUAL PRODOTTO */
 
 .hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 420px;
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: 0;
+  width: min(65%, 900px);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  -webkit-mask-image: linear-gradient(to left, #000 48%, transparent 100%);
+  mask-image: linear-gradient(to left, #000 48%, transparent 100%);
 }
 
 .hero-glow {
@@ -227,14 +242,13 @@
 
 @media (max-width: 950px) {
   .hero-content {
-    grid-template-columns: 1fr;
-    gap: 45px;
     padding-top: 70px;
     padding-bottom: 80px;
   }
 
   .hero-visual {
-    min-height: 390px;
+    width: 80%;
+    opacity: 0.45;
   }
 
   .floating-label {
@@ -256,7 +270,8 @@
   }
 
   .hero-visual {
-    min-height: 330px;
+    width: 100%;
+    opacity: 0.25;
   }
 
   .product-preview {
@@ -267,18 +282,4 @@
     top: 0;
     right: 0;
   }
-}
-
-
-.hero-visual {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-visual .hero-3d {
-  flex: 1;
 }

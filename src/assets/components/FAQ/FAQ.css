@@ -1,0 +1,137 @@
+.faq-section {
+  background: #f6f3ee;
+  padding: 100px 0;
+}
+
+.faq-container {
+  max-width: 900px;
+}
+
+.faq-heading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.faq-eyebrow {
+  color: #8b2635;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.faq-heading h2 {
+  color: #181a1b;
+  font-size: clamp(30px, 4vw, 44px);
+  margin: 14px 0;
+  letter-spacing: -1px;
+}
+
+.faq-heading p {
+  color: #77736f;
+  line-height: 1.7;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid #e8e2d9;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.faq-item:hover {
+  border-color: #d6b56d;
+}
+
+.faq-item-open {
+  border-color: #d6b56d;
+  box-shadow: 0 5px 24px rgba(0, 0, 0, 0.035);
+}
+
+.faq-question {
+  margin: 0;
+  font-size: inherit;
+}
+
+.faq-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 22px 25px;
+  background: transparent;
+  border: none;
+  color: #181a1b;
+  text-align: left;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-trigger svg {
+  color: #8b2635;
+  flex-shrink: 0;
+}
+
+.faq-trigger:focus-visible {
+  outline: 2px solid #8b2635;
+  outline-offset: -4px;
+}
+
+.faq-answer {
+  padding: 0 25px 22px;
+}
+
+.faq-answer[hidden] {
+  display: none;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: #77736f;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.faq-bottom {
+  text-align: center;
+  margin-top: 36px;
+  color: #77736f;
+  font-size: 14px;
+}
+
+.faq-bottom a {
+  color: #8b2635;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.faq-bottom a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 70px 0;
+  }
+}
+
+  .faq-heading {
+    margin-bottom: 32px;
+  }
+
+  .faq-trigger {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    padding: 0 18px 18px;
+  }

@@ -4,6 +4,8 @@ import Benefits from "./assets/components/Benefits/Benefits";
 import Categories from "./assets/components/Categories/Categories";
 import Footer from "./assets/components/Footer/Footer";
 import QuoteRequest from "./assets/components/ColorSelector/QuoteRequest";
+import About from "./assets/components/About/About";
+import FAQ from "./assets/components/FAQ/FAQ";
 import "./App.css";
 
 export default function App() {
@@ -15,9 +17,10 @@ export default function App() {
         <Hero />
         <Benefits />
         <Categories />
+        <About />
         <QuoteRequest />
       </main>
-
+      <FAQ />
       <Footer />
     </>
   );
