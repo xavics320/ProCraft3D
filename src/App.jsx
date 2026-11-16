@@ -6,13 +6,14 @@ import Footer from "./assets/components/Footer/Footer";
 import QuoteRequest from "./assets/components/ColorSelector/QuoteRequest";
 import About from "./assets/components/About/About";
 import FAQ from "./assets/components/FAQ/FAQ";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import "./App.css";
 
 export default function App() {
   return (
     <>
       <Header />
-
       <main>
         <Hero />
         <Benefits />
@@ -22,6 +23,8 @@ export default function App() {
       </main>
       <FAQ />
       <Footer />
+      <Analytics />
+      <SpeedInsights />
     </>
   );
 }
