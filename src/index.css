@@ -1,8 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-
 :root {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans Variable', sans-serif;
   color: #242424;
   background: #f6f3ee;
   font-synthesis: none;
@@ -46,7 +43,7 @@ h1, h2, h3, p {
 }
 
 h1, h2, h3 {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Manrope Variable', sans-serif;
 }
 
 .container {
