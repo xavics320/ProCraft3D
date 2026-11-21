@@ -59,13 +59,10 @@ export default function CategoryGallery({
         currency: "EUR"
       })
     : null;
-  const message = [
-    "Ciao ProCraft3D! Vorrei richiedere un preventivo.",
-    "",
-    `Categoria: ${current.category}`,
-    `Prodotto: ${current.name}`,
-    ...(price ? [`Prezzo indicativo: ${price} / pezzo`] : [])
-  ].join("\n");
+  
+  const message = `Ciao! 👋 Ho visto il prodotto "${current.name}" sul sito ProCraft3D e 
+  vorrei ricevere qualche informazione e un preventivo personalizzato. Grazie!`;
+
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
   return (
