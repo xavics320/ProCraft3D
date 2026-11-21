@@ -1,4 +1,3 @@
-
 export const products = {
   horeca: [
     {
@@ -8,7 +7,8 @@ export const products = {
       description:
         "Portaconto personalizzati per presentare il conto con uno stile coordinato al tuo locale.",
       image: "/images/horeca-portaconto.webp",
-      badge: "Per il tuo locale"
+      badge: "Per il tuo locale",
+      priceFrom: 12.90
     },
     {
       id: "horeca-portatovaglioli",
@@ -17,7 +17,8 @@ export const products = {
       description:
         "Portatovaglioli pratici e personalizzabili con il logo e i colori della tua attività.",
       image: "/images/horeca-portatovaglioli.webp",
-      badge: "Personalizzabile"
+      badge: "Personalizzabile",
+      priceFrom: 8.90
     },
     {
       id: "horeca-segnatavolo",
@@ -26,7 +27,8 @@ export const products = {
       description:
         "Segnatavolo realizzati su misura per ristoranti, bar e strutture ricettive.",
       image: "/images/horeca-segnatavolo.webp",
-      badge: "Su misura"
+      badge: "Su misura",
+      priceFrom: 7.90
     }
   ],
   premi: [
@@ -37,7 +39,8 @@ export const products = {
       description:
         "Targhe personalizzate per celebrare traguardi, anniversari e occasioni speciali.",
       image: "/images/premi-targa.webp",
-      badge: "Per ogni occasione"
+      badge: "Per ogni occasione",
+      priceFrom: 14.90
     },
     {
       id: "premi-trofeo",
@@ -46,7 +49,8 @@ export const products = {
       description:
         "Trofei dal design personalizzato per premiazioni, competizioni ed eventi aziendali.",
       image: "/images/premi-trofeo.webp",
-      badge: "Design unico"
+      badge: "Design unico",
+      priceFrom: 17.90
     },
     {
       id: "premi-riconoscimento",
@@ -55,7 +59,8 @@ export const products = {
       description:
         "Riconoscimenti personalizzati per valorizzare persone, risultati e collaborazioni.",
       image: "/images/premi-riconoscimento.webp",
-      badge: "Per aziende"
+      badge: "Per aziende",
+      priceFrom: 19.90
     }
   ],
   "porta-qr": [
@@ -66,7 +71,8 @@ export const products = {
       description:
         "Espositore da tavolo per rendere menu e listini facilmente accessibili tramite QR code.",
       image: "/images/porta-qr-menu.webp",
-      badge: "Per il tuo locale"
+      badge: "Per il tuo locale",
+      priceFrom: 8.90
     },
     {
       id: "porta-qr-nfc",
@@ -75,7 +81,8 @@ export const products = {
       description:
         "Supporto personalizzato con QR code e NFC per condividere menu, contatti e pagamenti.",
       image: "/images/porta-qr-nfc.webp",
-      badge: "QR + NFC"
+      badge: "QR + NFC",
+      priceFrom: 14.90
     },
     {
       id: "porta-qr-espositore",
@@ -84,7 +91,8 @@ export const products = {
       description:
         "Espositore compatto personalizzabile con logo, colori e collegamento digitale.",
       image: "/images/porta-qr-espositore.webp",
-      badge: "Personalizzabile"
+      badge: "Personalizzabile",
+      priceFrom: 12.90
     }
   ],
   portachiavi: [
@@ -95,7 +103,8 @@ export const products = {
       description:
         "Portachiavi personalizzati con il logo della tua azienda. Ideali per clienti, collaboratori ed eventi.",
       image: "/images/portachiavi-logo.webp",
-      badge: "Per aziende"
+      badge: "Per aziende",
+      priceFrom: 3.90
     },
     {
       id: "portachiavi-nome",
@@ -104,7 +113,8 @@ export const products = {
       description:
         "Portachiavi con nomi, iniziali o brevi scritte. Personalizzabili nei colori e nella forma.",
       image: "/images/portachiavi-nome.webp",
-      badge: "Personalizzabile"
+      badge: "Personalizzabile",
+      priceFrom: 4.90
     },
     {
       id: "portachiavi-qr",
@@ -113,7 +123,8 @@ export const products = {
       description:
         "Portachiavi con codice QR per condividere un sito web, un menu o i contatti della tua attività.",
       image: "/images/portachiavi-qr.webp",
-      badge: "Digitale"
+      badge: "Digitale",
+      priceFrom: 5.90
     }
   ],
   "accessori-smartphone": [
@@ -124,7 +135,8 @@ export const products = {
       description:
         "Supporto da tavolo personalizzabile per tenere lo smartphone a portata di mano.",
       image: "/images/smartphone-supporto.webp",
-      badge: "Da tavolo"
+      badge: "Da tavolo",
+      priceFrom: 10.90
     },
     {
       id: "smartphone-stand",
@@ -133,7 +145,8 @@ export const products = {
       description:
         "Stand compatto con logo e colori personalizzati, ideale per la scrivania o come gadget.",
       image: "/images/smartphone-stand.webp",
-      badge: "Per aziende"
+      badge: "Per aziende",
+      priceFrom: 7.90
     },
     {
       id: "smartphone-dock",
@@ -142,7 +155,9 @@ export const products = {
       description:
         "Base porta smartphone realizzata su misura per la tua identità aziendale.",
       image: "/images/smartphone-dock.webp",
-      badge: "Su misura"
+      badge: "Su misura",
+      priceFrom: 14.90
+
     }
   ],
   gadget: [
@@ -153,25 +168,28 @@ export const products = {
       description:
         "Organizer da scrivania personalizzato per tenere in ordine gli accessori e valorizzare il tuo brand.",
       image: "/images/gadget-organizer.webp",
-      badge: "Per eventi"
+      badge: "Per eventi",
+      priceFrom: 18.90
     },
     {
       id: "gadget-regalo",
-      name: "Idea regalo aziendale",
+      name: "Cover personalizzata",
       category: "Regali aziendali",
       description:
         "Oggetti originali realizzati con stampa 3D e personalizzati per il tuo brand.",
       image: "/images/gadget-regalo.webp",
-      badge: "Design unico"
+      badge: "Design unico",
+      priceFrom: 9.90
     },
     {
       id: "gadget-logo",
-      name: "Oggetto promozionale",
+      name: "Laptop stand",
       category: "Regali aziendali",
       description:
         "Gadget promozionali su misura per presentare la tua attività in modo distintivo.",
       image: "/images/gadget-logo.webp",
-      badge: "Personalizzabile"
+      badge: "Personalizzabile",
+      priceFrom: 9.90
     }
   ]
 };

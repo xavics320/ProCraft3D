@@ -46,7 +46,7 @@ useEffect(() => {
       details: `Vorrei un preventivo per: ${product}.`
     }));
 
-    document.getElementById("preventivo")?.scrollIntoView({
+    document.getElementById("contattaci")?.scrollIntoView({
       behavior: "smooth"
     });
   };

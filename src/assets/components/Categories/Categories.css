@@ -123,6 +123,60 @@
   margin-top: 0;
 }
 
+/* PREZZI CATEGORIE */
+
+.category-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 14px;
+}
+
+.category-price span {
+  color: #777;
+  font-size: 12px;
+}
+
+.category-price strong {
+  color: var(--red);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+/* Mantiene le card allineate */
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-info {
+  flex: 1;
+  align-items: flex-start;
+}
+
+.category-info > div {
+  min-width: 0;
+}
+
+.category-info > svg {
+  margin-top: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .category-price {
+    margin-top: 12px;
+  }
+
+  .category-price strong {
+    font-size: 16px;
+  }
+}
+
 /* Su mobile la galleria segue subito la card */
 
 @media (max-width: 600px) {

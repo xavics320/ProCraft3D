@@ -39,7 +39,7 @@ export default function Hero() {
 
           <div className="hero-highlights">
             <span><Check size={16} /> Design personalizzato</span>
-            <span><Check size={16} /> Piccole e grandiproduzioni</span>
+            <span><Check size={16} /> Piccole e grandi produzioni</span>
             <span><Check size={16} /> Made in Italy</span>
           </div>
         </div>
@@ -51,6 +51,8 @@ export default function Hero() {
             src="/images/Hero-imm.webp"
             alt=""
             fetchPriority="high"
+            loading="eager"
+            decoding="async"
           />
         </div>
 

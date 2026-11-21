@@ -17,6 +17,8 @@ import { categories } from "../../data/categories.js";
 import { products } from "../../data/product.js";
 import "./CategoryGallery.css";
 
+const WHATSAPP_NUMBER = "393484987611";
+
 const categoryIcons = {
   horeca: Utensils,
   premi: Award,
@@ -51,14 +53,20 @@ export default function CategoryGallery({
     );
   };
 
-  const requestQuote = () => {
-    const params = new URLSearchParams({
-      category: current.category,
-      product: current.name
-    });
-
-    window.location.hash = `preventivo?${params.toString()}`;
-  };
+  const price = current.priceFrom != null
+    ? current.priceFrom.toLocaleString("it-IT", {
+        style: "currency",
+        currency: "EUR"
+      })
+    : null;
+  const message = [
+    "Ciao ProCraft3D! Vorrei richiedere un preventivo.",
+    "",
+    `Categoria: ${current.category}`,
+    `Prodotto: ${current.name}`,
+    ...(price ? [`Prezzo indicativo: ${price} / pezzo`] : [])
+  ].join("\n");
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
   return (
     <div className="category-gallery">
@@ -112,9 +120,34 @@ export default function CategoryGallery({
           <span className="gallery-counter">
             {currentIndex + 1} / {items.length}
           </span>
+            <h4>{current.name}</h4>
+            <p>{current.description}</p>
+              {current.priceFrom != null && (
+                <div className="gallery-price">
+                <span className="gallery-price-label">
+                  Prezzo a partire da
+                </span>
+        <div className="gallery-price-value">
+          <strong>
+            {current.priceFrom.toLocaleString("it-IT", {
+            style: "currency",
+            currency: "EUR",
+            })}
+          </strong>
+          <span>/ pezzo</span>
+        </div>
+      {current.minQuantity && (
+        <span className="gallery-price-minimum">
+          Ordine minimo: {current.minQuantity} pezzi
+        </span>
+      )}
 
-          <h4>{current.name}</h4>
-          <p>{current.description}</p>
+      <p className="gallery-price-note">
+        Il prezzo finale varia in base a quantità,
+        dimensioni e personalizzazione.
+      </p>
+    </div>
+  )}
 
           <div className="gallery-controls">
             <button
@@ -132,13 +165,15 @@ export default function CategoryGallery({
             </button>
           </div>
 
-          <button
+          <a
             className="gallery-quote"
-            onClick={requestQuote}
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Richiedi preventivo
             <ArrowRight size={18} />
-          </button>
+          </a>
         </div>
       </div>
     </div>

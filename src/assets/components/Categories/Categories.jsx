@@ -1,4 +1,3 @@
-
 import {
   Utensils, Award, QrCode,
   KeyRound, Smartphone, Gift, ArrowUpRight
@@ -71,6 +70,18 @@ export default function Categories() {
                     <div>
                       <h3>{category.title}</h3>
                       <p>{category.description}</p>
+                      {category.startingPrice != null && (
+                        <div className="category-price">
+                          <span>A partire da</span>
+                          <strong>
+                            {category.startingPrice.toLocaleString("it-IT", {
+                              style: "currency",
+                              currency: "EUR",
+                            })}
+                          </strong>
+                          <span>/pz</span>
+                        </div>
+                      )}
                     </div>
                     <ArrowUpRight size={21} />
                   </div>
@@ -91,7 +102,8 @@ export default function Categories() {
         <div className="section-bottom">
           <h2>Ogni dettaglio fa la differenza.</h2>
           <p >
-          Materiali, dimensioni, quantità e personalizzazioni determinano il prezzo finale di ogni creazione.
+           I prezzi esposti sono indicativi e possono variare.
+           < br />Materiali, dimensioni, quantità e personalizzazioni determinano il prezzo finale di ogni creazione.
           </p>
         </div>
       </div>
