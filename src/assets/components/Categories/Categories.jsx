@@ -99,6 +99,14 @@ export default function Categories() {
             );
           })}
         </div>
+        <nav className="seo-category-links" aria-label="Approfondisci il catalogo">
+          <h3>Scopri le nostre collezioni</h3>
+          <div>
+            <a href="/portachiavi-personalizzati/">Portachiavi personalizzati con logo</a>
+            <a href="/accessori-horeca/">Accessori personalizzati per ristoranti e bar</a>
+            <a href="/porta-qr-code/">Porta QR code personalizzati per ristoranti e aziende</a>
+          </div>
+        </nav>
         <div className="section-bottom">
           <h2>Ogni dettaglio fa la differenza.</h2>
           <p >
