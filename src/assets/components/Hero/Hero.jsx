@@ -15,14 +15,15 @@ export default function Hero() {
           </div>
 
           <h1>
-            Il tuo brand.
+            Gadget personalizzati
             <br />
-            La nostra <span>creatività.</span>
+            con <span>stampa 3D.</span>
           </h1>
 
           <p>
-            Realizziamo gadget aziendali personalizzati e oggetti su misura
-            con stampa 3D per aziende, professionisti, bar e ristoranti.
+            Il tuo brand, la nostra creatività. Realizziamo gadget aziendali,
+            portachiavi con logo e accessori su misura per aziende,
+            professionisti, bar e ristoranti in Lombardia.
             
           </p>
 

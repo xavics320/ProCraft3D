@@ -14,9 +14,9 @@ const faqs = [
       "Certamente! Il catalogo è solo un punto di partenza. Raccontaci la tua idea, anche inviando immagini o riferimenti, e valuteremo insieme come realizzarla.",
   },
   {
-  question: "Perché non sono indicati i prezzi dei prodotti?",
+  question: "I prezzi indicati sul sito sono definitivi?",
   answer:
-    "Ogni creazione ProCraft3D è unica! Il prezzo dipende da materiali, dimensioni, quantità e personalizzazioni richieste. Per questo preferiamo offrirti un preventivo su misura, senza impegno e senza sorprese.",
+    "I prezzi mostrati sono indicativi e si riferiscono a configurazioni base. Il costo finale dipende da dimensioni, materiali, quantità e personalizzazioni. Richiedi un preventivo su misura senza impegno.",
   },
   {
     question: "È possibile ordinare un solo pezzo?",
